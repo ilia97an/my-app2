@@ -26,6 +26,7 @@ interface IDatabaseScope {
 export function getDB(): IDatabaseScope {
     return createSingleton<IDatabaseScope>('my-app-db-space', () => {
         return {
+            //process.env.PG_CONNECTION_STRING
             db: pgp(process.env.PG_CONNECTION_STRING),
             pgp
         };

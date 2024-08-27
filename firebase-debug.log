@@ -1,0 +1,98 @@
+[debug] [2024-08-26T17:24:01.439Z] ----------------------------------------------------------------------
+[debug] [2024-08-26T17:24:01.442Z] Command:       /opt/node/bin/node /opt/node/bin/firebase deploy --only hosting
+[debug] [2024-08-26T17:24:01.443Z] CLI Version:   13.15.2
+[debug] [2024-08-26T17:24:01.443Z] Platform:      linux
+[debug] [2024-08-26T17:24:01.444Z] Node Version:  v20.9.0
+[debug] [2024-08-26T17:24:01.444Z] Time:          Mon Aug 26 2024 22:24:01 GMT+0500 (Yekaterinburg Standard Time)
+[debug] [2024-08-26T17:24:01.444Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-26T17:24:01.448Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-08-26T17:24:01.588Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-26T17:24:01.588Z] > authorizing via signed-in user (iliab1997g@gmail.com)
+[debug] [2024-08-26T17:24:01.589Z] [iam] checking project backend-a5867 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-26T17:24:01.589Z] > refreshing access token with scopes: []
+[debug] [2024-08-26T17:24:01.590Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-26T17:24:01.591Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-26T17:24:01.601Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: connect ECONNREFUSED 127.0.0.1:443
+[warn] ⚠  Unable to fetch the CLI MOTD and remote config. This is not a fatal error, but may indicate an issue with your network connection. 
+[debug] [2024-08-26T17:24:01.603Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[debug] [2024-08-26T17:24:04.817Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-08-26T17:24:04.817Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-26T17:24:05.471Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/backend-a5867:testIamPermissions [none]
+[debug] [2024-08-26T17:24:05.472Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/backend-a5867:testIamPermissions x-goog-quota-user=projects/backend-a5867
+[debug] [2024-08-26T17:24:05.472Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/backend-a5867:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-26T17:25:11.579Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/backend-a5867:testIamPermissions 200
+[debug] [2024-08-26T17:25:11.579Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/backend-a5867:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-26T17:25:11.581Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/backend-a5867 [none]
+[debug] [2024-08-26T17:25:17.565Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/backend-a5867 200
+[debug] [2024-08-26T17:25:17.566Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/backend-a5867 {"projectId":"backend-a5867","projectNumber":"750352775902","displayName":"backend","name":"projects/backend-a5867","resources":{"hostingSite":"backend-a5867"},"state":"ACTIVE","etag":"1_f0b40bca-079a-475c-8cd4-1f15ed6e82f0"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-08-26T17:25:23.552Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/backend-a5867/sites/backend-a5867 [none]
+[debug] [2024-08-26T17:25:25.883Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/backend-a5867/sites/backend-a5867 200
+[debug] [2024-08-26T17:25:25.884Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/backend-a5867/sites/backend-a5867 {"name":"projects/backend-a5867/sites/backend-a5867","defaultUrl":"https://backend-a5867.web.app","type":"DEFAULT_SITE"}
+[info]   ▲ Next.js 14.2.5
+
+[info]   - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/4) ...
+
+[info]    Generating static pages (1/4) 
+
+[info]    Generating static pages (2/4) 
+
+[info]    Generating static pages (3/4) 
+
+[info]  ✓ Generating static pages (4/4)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                               Size     First Load JS
+┌ ƒ /api/items                            0 B                0 B
+└ ƒ /api/items/[slug]                     0 B                0 B
++ First Load JS shared by all             0 B
+
+Route (pages)                             Size     First Load JS
+─ ○ /404                                  181 B          79.1 kB
++ First Load JS shared by all             78.9 kB
+  ├ chunks/framework-f66176bb897dc684.js  45.2 kB
+  ├ chunks/main-5f19b8d719050ab5.js       32.1 kB
+  └ other shared chunks (total)           1.62 kB
+
+ƒ Middleware                              26.9 kB
+
+[info] 
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • middleware
+[info]  • non-static component /api/items/[slug]/route
+[info]  • non-static component /api/items/route
+[info] 
+[debug] [2024-08-26T17:25:49.950Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/backend-a5867/sites/backend-a5867 [none]
+[debug] [2024-08-26T17:25:51.444Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/backend-a5867/sites/backend-a5867 200
+[debug] [2024-08-26T17:25:51.444Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/backend-a5867/sites/backend-a5867 {"name":"projects/backend-a5867/sites/backend-a5867","defaultUrl":"https://backend-a5867.web.app","type":"DEFAULT_SITE"}
